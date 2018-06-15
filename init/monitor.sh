@@ -1,15 +1,15 @@
 #!/bin/bash
 readonly PROG_DIR=$(readlink -m $(dirname $0))
-sercd=$PROG_DIR/../sercd
+shtd=$PROG_DIR/../shtd
 log=$PROG_DIR/../logs/monitor.log
 
 function auto_restart(){
-	status=`$sercd status`
-	if [ "$status" == "Serc server is not running" ];then
-		$sercd restart
-		echo "`date +%F' '%H:%M:%S`[error]	Serc server is not running and restarted" >> $log
+	status=`$shtd status`
+	if [ "$status" == "SHT server is not running" ];then
+		$shtd restart
+		echo "`date +%F' '%H:%M:%S`[error]	SHT server is not running and restarted" >> $log
 	else
-		echo "`date +%F' '%H:%M:%S`[info]	Serc server is running" >> $log
+		echo "`date +%F' '%H:%M:%S`[info]	SHT server is running" >> $log
 	fi	
 	/etc/init.d/ntp stop
 	sleep 2

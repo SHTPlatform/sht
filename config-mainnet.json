@@ -3,19 +3,14 @@
   "address": "0.0.0.0",
   "publicIp": "",
   "logLevel": "log",
-  "magic": "46677eef",
+  "magic": "59899fc6",
   "api": {
     "access": {
       "whiteList": []
     }
   },
   "peers": {
-    "list": [
-      {
-        "ip": "47.96.64.180",
-        "port": 81
-      }
-    ],
+    "list": [],
     "blackList": [],
     "options": {
       "timeout": 4000
